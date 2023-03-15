@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        FirebaseDatabase.Database.database(url: "https://twittercopy-9149f-default-rtdb.asia-southeast1.firebasedatabase.app/")
         return true
     }
 
